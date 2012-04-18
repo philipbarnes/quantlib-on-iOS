@@ -1,0 +1,29 @@
+================================================================================
+ Filename:  Quantlib on iOS
+ Author:    Philip Barnes
+            http://stridingedgetechnologies.blogspot.co.uk/
+            http://www.stridingedgetechnologies.co.uk/
+ Copyright: (c) Copyright 2012 Philip Barnes
+ Licence:   Please feel free to use this, with attribution
+================================================================================
+
+Builds a Quantlib framework for iOS
+
+Creates a set of universal libraries that can be used on iOS devices and in the
+iOS simulator. Then creates a framework to make using quantlib in Xcode very
+easy.
+
+================================================================================
+How to use
+================================================================================
+
+Download a copy of the Quantlib source code into a directory
+Download the buildql.sh script and put it into the Quantlib source directory
+Run ./buildql.sh (configuration options are at the start of the script)
+Include the Quantlib iOS framework in your xcode project
+
+================================================================================
+Example Xcode project
+================================================================================
+
+There will be an Xcode example project included shortly.
