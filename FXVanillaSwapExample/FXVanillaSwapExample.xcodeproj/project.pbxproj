@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D98BF121587E9BC0090FB57 /* boost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D98BF101587E9BC0090FB57 /* boost.framework */; };
+		3D98BF131587E9BC0090FB57 /* ql.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D98BF111587E9BC0090FB57 /* ql.framework */; };
+		3DC38F3F158657820013509C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC38F3E158657820013509C /* UIKit.framework */; };
+		3DC38F41158657820013509C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC38F40158657820013509C /* Foundation.framework */; };
+		3DC38F43158657820013509C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC38F42158657820013509C /* CoreGraphics.framework */; };
+		3DC38F49158657820013509C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DC38F47158657820013509C /* InfoPlist.strings */; };
+		3DC38F4B158657820013509C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC38F4A158657820013509C /* main.m */; };
+		3DC38F4F158657820013509C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC38F4E158657820013509C /* AppDelegate.m */; };
+		3DC38F52158657820013509C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC38F51158657820013509C /* ViewController.m */; };
+		3DC38F55158657820013509C /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DC38F53158657820013509C /* ViewController.xib */; };
+		3DC38F5D158657830013509C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC38F5C158657830013509C /* SenTestingKit.framework */; };
+		3DC38F5E158657830013509C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC38F3E158657820013509C /* UIKit.framework */; };
+		3DC38F5F158657830013509C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC38F40158657820013509C /* Foundation.framework */; };
+		3DC38F67158657830013509C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DC38F65158657830013509C /* InfoPlist.strings */; };
+		3DC38F6A158657830013509C /* FXVanillaSwapExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC38F69158657830013509C /* FXVanillaSwapExampleTests.m */; };
+		3DC38F7515865C220013509C /* FXVanillaSwapPricer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3DC38F7415865C220013509C /* FXVanillaSwapPricer.mm */; };
+		3DC38F7615865C220013509C /* FXVanillaSwapPricer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3DC38F7415865C220013509C /* FXVanillaSwapPricer.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3DC38F60158657830013509C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DC38F31158657820013509C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DC38F39158657820013509C;
+			remoteInfo = FXVanillaSwapExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3D98BF101587E9BC0090FB57 /* boost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = boost.framework; path = ../../frameworks/boost.framework; sourceTree = "<group>"; };
+		3D98BF111587E9BC0090FB57 /* ql.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ql.framework; path = ../../frameworks/ql.framework; sourceTree = "<group>"; };
+		3DC38F3A158657820013509C /* FXVanillaSwapExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FXVanillaSwapExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DC38F3E158657820013509C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3DC38F40158657820013509C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3DC38F42158657820013509C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3DC38F46158657820013509C /* FXVanillaSwapExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FXVanillaSwapExample-Info.plist"; sourceTree = "<group>"; };
+		3DC38F48158657820013509C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3DC38F4A158657820013509C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3DC38F4C158657820013509C /* FXVanillaSwapExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FXVanillaSwapExample-Prefix.pch"; sourceTree = "<group>"; };
+		3DC38F4D158657820013509C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3DC38F4E158657820013509C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3DC38F50158657820013509C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3DC38F51158657820013509C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3DC38F54158657820013509C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		3DC38F5B158657830013509C /* FXVanillaSwapExampleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FXVanillaSwapExampleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DC38F5C158657830013509C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		3DC38F64158657830013509C /* FXVanillaSwapExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FXVanillaSwapExampleTests-Info.plist"; sourceTree = "<group>"; };
+		3DC38F66158657830013509C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3DC38F68158657830013509C /* FXVanillaSwapExampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FXVanillaSwapExampleTests.h; sourceTree = "<group>"; };
+		3DC38F69158657830013509C /* FXVanillaSwapExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FXVanillaSwapExampleTests.m; sourceTree = "<group>"; };
+		3DC38F7315865C220013509C /* FXVanillaSwapPricer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXVanillaSwapPricer.h; sourceTree = "<group>"; };
+		3DC38F7415865C220013509C /* FXVanillaSwapPricer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FXVanillaSwapPricer.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3DC38F37158657820013509C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D98BF121587E9BC0090FB57 /* boost.framework in Frameworks */,
+				3D98BF131587E9BC0090FB57 /* ql.framework in Frameworks */,
+				3DC38F3F158657820013509C /* UIKit.framework in Frameworks */,
+				3DC38F41158657820013509C /* Foundation.framework in Frameworks */,
+				3DC38F43158657820013509C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DC38F57158657830013509C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DC38F5D158657830013509C /* SenTestingKit.framework in Frameworks */,
+				3DC38F5E158657830013509C /* UIKit.framework in Frameworks */,
+				3DC38F5F158657830013509C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3DC38F2F158657820013509C = {
+			isa = PBXGroup;
+			children = (
+				3D98BF101587E9BC0090FB57 /* boost.framework */,
+				3D98BF111587E9BC0090FB57 /* ql.framework */,
+				3DC38F44158657820013509C /* FXVanillaSwapExample */,
+				3DC38F62158657830013509C /* FXVanillaSwapExampleTests */,
+				3DC38F3D158657820013509C /* Frameworks */,
+				3DC38F3B158657820013509C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3DC38F3B158657820013509C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DC38F3A158657820013509C /* FXVanillaSwapExample.app */,
+				3DC38F5B158657830013509C /* FXVanillaSwapExampleTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DC38F3D158657820013509C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DC38F3E158657820013509C /* UIKit.framework */,
+				3DC38F40158657820013509C /* Foundation.framework */,
+				3DC38F42158657820013509C /* CoreGraphics.framework */,
+				3DC38F5C158657830013509C /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3DC38F44158657820013509C /* FXVanillaSwapExample */ = {
+			isa = PBXGroup;
+			children = (
+				3DC38F4D158657820013509C /* AppDelegate.h */,
+				3DC38F4E158657820013509C /* AppDelegate.m */,
+				3DC38F50158657820013509C /* ViewController.h */,
+				3DC38F51158657820013509C /* ViewController.m */,
+				3DC38F7315865C220013509C /* FXVanillaSwapPricer.h */,
+				3DC38F7415865C220013509C /* FXVanillaSwapPricer.mm */,
+				3DC38F53158657820013509C /* ViewController.xib */,
+				3DC38F45158657820013509C /* Supporting Files */,
+			);
+			path = FXVanillaSwapExample;
+			sourceTree = "<group>";
+		};
+		3DC38F45158657820013509C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3DC38F46158657820013509C /* FXVanillaSwapExample-Info.plist */,
+				3DC38F47158657820013509C /* InfoPlist.strings */,
+				3DC38F4A158657820013509C /* main.m */,
+				3DC38F4C158657820013509C /* FXVanillaSwapExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3DC38F62158657830013509C /* FXVanillaSwapExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				3DC38F68158657830013509C /* FXVanillaSwapExampleTests.h */,
+				3DC38F69158657830013509C /* FXVanillaSwapExampleTests.m */,
+				3DC38F63158657830013509C /* Supporting Files */,
+			);
+			path = FXVanillaSwapExampleTests;
+			sourceTree = "<group>";
+		};
+		3DC38F63158657830013509C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3DC38F64158657830013509C /* FXVanillaSwapExampleTests-Info.plist */,
+				3DC38F65158657830013509C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3DC38F39158657820013509C /* FXVanillaSwapExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DC38F6D158657830013509C /* Build configuration list for PBXNativeTarget "FXVanillaSwapExample" */;
+			buildPhases = (
+				3DC38F36158657820013509C /* Sources */,
+				3DC38F37158657820013509C /* Frameworks */,
+				3DC38F38158657820013509C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FXVanillaSwapExample;
+			productName = FXVanillaSwapExample;
+			productReference = 3DC38F3A158657820013509C /* FXVanillaSwapExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3DC38F5A158657830013509C /* FXVanillaSwapExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DC38F70158657830013509C /* Build configuration list for PBXNativeTarget "FXVanillaSwapExampleTests" */;
+			buildPhases = (
+				3DC38F56158657830013509C /* Sources */,
+				3DC38F57158657830013509C /* Frameworks */,
+				3DC38F58158657830013509C /* Resources */,
+				3DC38F59158657830013509C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3DC38F61158657830013509C /* PBXTargetDependency */,
+			);
+			name = FXVanillaSwapExampleTests;
+			productName = FXVanillaSwapExampleTests;
+			productReference = 3DC38F5B158657830013509C /* FXVanillaSwapExampleTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3DC38F31158657820013509C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Striding Edge Technologies";
+			};
+			buildConfigurationList = 3DC38F34158657820013509C /* Build configuration list for PBXProject "FXVanillaSwapExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3DC38F2F158657820013509C;
+			productRefGroup = 3DC38F3B158657820013509C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3DC38F39158657820013509C /* FXVanillaSwapExample */,
+				3DC38F5A158657830013509C /* FXVanillaSwapExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3DC38F38158657820013509C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DC38F49158657820013509C /* InfoPlist.strings in Resources */,
+				3DC38F55158657820013509C /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DC38F58158657830013509C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DC38F67158657830013509C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3DC38F59158657830013509C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3DC38F36158657820013509C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DC38F4B158657820013509C /* main.m in Sources */,
+				3DC38F4F158657820013509C /* AppDelegate.m in Sources */,
+				3DC38F52158657820013509C /* ViewController.m in Sources */,
+				3DC38F7515865C220013509C /* FXVanillaSwapPricer.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DC38F56158657830013509C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DC38F6A158657830013509C /* FXVanillaSwapExampleTests.m in Sources */,
+				3DC38F7615865C220013509C /* FXVanillaSwapPricer.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3DC38F61158657830013509C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DC38F39158657820013509C /* FXVanillaSwapExample */;
+			targetProxy = 3DC38F60158657830013509C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3DC38F47158657820013509C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DC38F48158657820013509C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3DC38F53158657820013509C /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DC38F54158657820013509C /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+		3DC38F65158657830013509C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DC38F66158657830013509C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3DC38F6B158657830013509C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$HOME/frameworks/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		3DC38F6C158657830013509C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$HOME/frameworks/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3DC38F6E158657830013509C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FXVanillaSwapExample/FXVanillaSwapExample-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				INFOPLIST_FILE = "FXVanillaSwapExample/FXVanillaSwapExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3DC38F6F158657830013509C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FXVanillaSwapExample/FXVanillaSwapExample-Prefix.pch";
+				INFOPLIST_FILE = "FXVanillaSwapExample/FXVanillaSwapExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3DC38F71158657830013509C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FXVanillaSwapExample.app/FXVanillaSwapExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FXVanillaSwapExample/FXVanillaSwapExample-Prefix.pch";
+				INFOPLIST_FILE = "FXVanillaSwapExampleTests/FXVanillaSwapExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		3DC38F72158657830013509C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FXVanillaSwapExample.app/FXVanillaSwapExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FXVanillaSwapExample/FXVanillaSwapExample-Prefix.pch";
+				INFOPLIST_FILE = "FXVanillaSwapExampleTests/FXVanillaSwapExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3DC38F34158657820013509C /* Build configuration list for PBXProject "FXVanillaSwapExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DC38F6B158657830013509C /* Debug */,
+				3DC38F6C158657830013509C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DC38F6D158657830013509C /* Build configuration list for PBXNativeTarget "FXVanillaSwapExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DC38F6E158657830013509C /* Debug */,
+				3DC38F6F158657830013509C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DC38F70158657830013509C /* Build configuration list for PBXNativeTarget "FXVanillaSwapExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DC38F71158657830013509C /* Debug */,
+				3DC38F72158657830013509C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3DC38F31158657820013509C /* Project object */;
+}
