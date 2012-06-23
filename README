@@ -26,4 +26,10 @@ Include the Quantlib iOS framework in your xcode project
 Example Xcode project
 ================================================================================
 
-There will be an Xcode example project included shortly.
+The example xcode project is something that was written quickly to show how to
+use the QuantLib C++ library in an Objective-C++ class with an Objective-C
+interface. It is not production quality, just a demonstration of how to use the
+PIMPL idiom.
+
+It expects both the boost and QuantLib iOS frameworks to be located in 
+~/frameworks. It has been built using xcode 4.3.3.
