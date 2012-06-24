@@ -93,18 +93,19 @@ using namespace QuantLib;
     
     // convert the settlement date
     
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
     dateFormatter.dateFormat = @"dd";
-    dayString = [dateFormatter stringFromDate: settlement];
+    NSString *dayString = [dateFormatter stringFromDate: settlement];
     dateFormatter.dateFormat = @"MM";
-    monthString = [dateFormatter stringFromDate: settlement];
+    NSString *monthString = [dateFormatter stringFromDate: settlement];
     dateFormatter.dateFormat = @"YYYY";
-    yearString = [dateFormatter stringFromDate: settlement];
+    NSString *yearString = [dateFormatter stringFromDate: settlement];
     
     NSLog(@"settlement day %@ month %@ year %@", dayString, monthString, yearString);
     
-    day = [dayString intValue];
-    month = intToQLMonth([monthString intValue]);
-    year = [yearString intValue];
+    QuantLib::Day day = [dayString intValue];
+    QuantLib::Month month = intToQLMonth([monthString intValue]);
+    QuantLib::Year year = [yearString intValue];
     
     _settlementDate = Date(day, month, year);
     
