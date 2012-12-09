@@ -32,4 +32,6 @@ interface. It is not production quality, just a demonstration of how to use the
 PIMPL idiom.
 
 It expects both the boost and QuantLib iOS frameworks to be located in 
-~/frameworks. It has been built using xcode 4.3.3.
+~/frameworks. It has been built using xcode 4.5.1
+
+See http://stridingedgetechnologies.blogspot.co.uk/ for background details.
