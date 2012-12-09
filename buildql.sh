@@ -4,6 +4,10 @@
 # Author:    Philip Barnes
 # Copyright: (c) Copyright 2012 Philip Barnes
 #===============================================================================
+# Changes:
+# 
+# Use huuskpes boost build (supports 1.51.0), QuantLib 1.2.1 and xcode 4.5.1
+#===============================================================================
 #
 # Builds a quantlib framework for iOS
 # Creates a set of universal libraries that can be used on an iPad/iPhone and
@@ -19,8 +23,8 @@
 # boost
 #===============================================================================
 
-: ${BOOST_HOME:=$HOME/tmp/boostoniphone-with-objc-nil-fix}
-: ${BOOST_SRC:=$BOOST_HOME/src/boost_1_49_0}
+: ${BOOST_HOME:=$HOME/tmp/huuskpes-boostoniphone}
+: ${BOOST_SRC:=$BOOST_HOME/src/boost_1_51_0}
 
 #===============================================================================
 # The number of jobs for make to run. On a 2.8 Mac Pro 8 core it takes around
@@ -31,7 +35,7 @@
 
 #===============================================================================
 # No need to change these variables.
-# Xcode 4.3.2 is used to build the libraries. This now resides in
+# Xcode 4.5.1 is used to build the libraries. This now resides in
 # /Applications/Xcode.app/Contents rather than /Developer
 #===============================================================================
 
@@ -135,12 +139,12 @@ buildArmv6()
     --prefix="$PREFIXDIR"/armv6 \
     CPP=/usr/bin/cpp \
     CXXCPP=/usr/bin/cpp \
-    CXXFLAGS="-march=armv6 -mno-thumb -gdwarf-2 -fmessage-length=0 -fvisibility=hidden -pipe -isysroot $ARM_DEV_DIR/SDKs/iPhoneOS5.1.sdk" \
+    CXXFLAGS="-march=armv6 -mno-thumb -gdwarf-2 -fmessage-length=0 -fvisibility=hidden -pipe -isysroot $ARM_DEV_DIR/SDKs/iPhoneOS6.0.sdk" \
     CXX=$ARM_DEV_DIR/usr/bin/arm-apple-darwin10-llvm-g++-4.2 \
     CC=$ARM_DEV_DIR/usr/bin/arm-apple-darwin10-llvm-gcc-4.2 \
     AR=$ARM_DEV_DIR/usr/bin/ar \
     CFLAGS="-march=armv6 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Wreturn-type -Wunused-variable -fmessage-length=0 -fvisibility=hidden -gdwarf-2 -mno-thumb \
-    -isysroot $ARM_DEV_DIR/SDKs/iPhoneOS5.1.sdk" \
+    -isysroot $ARM_DEV_DIR/SDKs/iPhoneOS6.0.sdk" \
     --disable-shared --enable-static
 
     displayMessage "Making Armv6 libraries"
@@ -166,15 +170,46 @@ buildArmv7()
     --prefix=$PREFIXDIR/armv7 \
     CPP=/usr/bin/cpp \
     CXXCPP=/usr/bin/cpp \
-    CXXFLAGS="-march=armv7 -mthumb -gdwarf-2 -fmessage-length=0 -fvisibility=hidden -pipe -isysroot $ARM_DEV_DIR/SDKs/iPhoneOS5.1.sdk" \
+    CXXFLAGS="-march=armv7 -mthumb -gdwarf-2 -fmessage-length=0 -fvisibility=hidden -pipe -isysroot $ARM_DEV_DIR/SDKs/iPhoneOS6.0.sdk" \
     CXX=$ARM_DEV_DIR/usr/bin/arm-apple-darwin10-llvm-g++-4.2 \
     CC=$ARM_DEV_DIR/usr/bin/arm-apple-darwin10-llvm-gcc-4.2 \
     AR=$ARM_DEV_DIR/usr/bin/ar \
     CFLAGS="-march=armv7 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Wreturn-type -Wunused-variable -fmessage-length=0 -fvisibility=hidden -gdwarf-2 -mthumb \
-    -isysroot $ARM_DEV_DIR/SDKs/iPhoneOS5.1.sdk" \
+    -isysroot $ARM_DEV_DIR/SDKs/iPhoneOS6.0.sdk" \
     --disable-shared --enable-static
 
     displayMessage "making Armv7 libraries"
+
+    make -j $JOBS clean
+    make -j $JOBS install
+
+    doneSection
+}
+
+#===============================================================================
+# Build the armv7 quantlib libraries
+#===============================================================================
+
+buildArmv7s()
+{
+    displayMessage "Configuring Armv7 libraries"
+
+    ./configure --with-boost-include=$BOOST_SRC \
+    --with-boost-lib=$BOOST_HOME/target/armv7s \
+    --host=arm-apple-darwin10 \
+    --target=arm-apple-darwin10 \
+    --prefix=$PREFIXDIR/armv7s \
+    CPP=/usr/bin/cpp \
+    CXXCPP=/usr/bin/cpp \
+    CXXFLAGS="-march=armv7s -mthumb -gdwarf-2 -fmessage-length=0 -fvisibility=hidden -pipe -isysroot $ARM_DEV_DIR/SDKs/iPhoneOS6.0.sdk" \
+    CXX=$ARM_DEV_DIR/usr/bin/arm-apple-darwin10-llvm-g++-4.2 \
+    CC=$ARM_DEV_DIR/usr/bin/arm-apple-darwin10-llvm-gcc-4.2 \
+    AR=$ARM_DEV_DIR/usr/bin/ar \
+    CFLAGS="-march=armv7s -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Wreturn-type -Wunused-variable -fmessage-length=0 -fvisibility=hidden -gdwarf-2 -mthumb \
+    -isysroot $ARM_DEV_DIR/SDKs/iPhoneOS6.0.sdk" \
+    --disable-shared --enable-static
+
+    displayMessage "making Armv7s libraries"
 
     make -j $JOBS clean
     make -j $JOBS install
@@ -195,7 +230,7 @@ buildi386()
     --prefix=$PREFIXDIR/i386 \
     CPP=/usr/bin/cpp \
     CXXCPP=/usr/bin/cpp \
-    CXXFLAGS="-march=i386 -pipe -isysroot $SIM_DEV_DIR/SDKs/iPhoneSimulator5.1.sdk" \
+    CXXFLAGS="-march=i386 -pipe -isysroot $SIM_DEV_DIR/SDKs/iPhoneSimulator6.0.sdk" \
     CXX=$SIM_DEV_DIR/usr/bin/i686-apple-darwin11-llvm-g++-4.2 \
     CC=$SIM_DEV_DIR/usr/bin/i686-apple-darwin11-llvm-gcc-4.2 \
     AR=$SIM_DEV_DIR/usr/bin/ar \
@@ -251,10 +286,10 @@ buildFramework()
 
     displayMessage "Framework: Lipoing library into $FRAMEWORK_INSTALL_NAME"
 
-    lipo \
+    /Applications/Xcode.app/Contents//Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/lipo \
         -create \
-        -arch armv6 "$PREFIXDIR/armv6/lib/libQuantLib.a" \
         -arch armv7 "$PREFIXDIR/armv7/lib/libQuantLib.a" \
+        -arch armv7s "$PREFIXDIR/armv7s/lib/libQuantLib.a" \
         -arch i386  "$PREFIXDIR/i386/lib/libQuantLib.a" \
         -o          "$FRAMEWORK_INSTALL_NAME" \
     || abort "Lipo $1 failed"
@@ -298,6 +333,7 @@ cleanEverythingReadyToStart
 createDirectoryStructure
 buildArmv6
 buildArmv7
+buildArmv7s
 buildi386
 buildFramework
 
